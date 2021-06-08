@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 """
 ✘ Commands Available
@@ -22,7 +22,7 @@ from . import *
 tr = Translator()
 
 
-@ultroid_cmd(pattern="autocorrect")
+@opkiku_cmd(pattern="autocorrect")
 async def acc(e):
     if Redis("AUTOCORRECT") != "True":
         udB.set("AUTOCORRECT", "True")
@@ -32,7 +32,7 @@ async def acc(e):
         await eor(e, "AUTOCORRECT Feature Off")
 
 
-@ultroid_bot.on(events.NewMessage(outgoing=True))
+@opkiku_bot.on(events.NewMessage(outgoing=True))
 async def gramme(event):
     if Redis("AUTOCORRECT") != "True":
         return
