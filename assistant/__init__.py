@@ -5,9 +5,9 @@
 # PLease read the GNU Affero General Public License in
 # <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
-from pyopkikuboy import *
-from pyopkikuboy.dB.database import Var
-from pyopkikuboy.functions.all import *
+from pyopkikubot import *
+from pyopkikubot.dB.database import Var
+from pyopkikubot.functions.all import *
 from telethon import Button, custom
 
 from strings import get_languages, get_string
