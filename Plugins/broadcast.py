@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 """
 ✘ Commands Available
@@ -30,7 +30,7 @@ import io
 from . import *
 
 
-@ultroid_cmd(pattern="add ?(.*)", allow_sudo=False)
+@opkiku_cmd(pattern="add ?(.*)", allow_sudo=False)
 async def broadcast_adder(event):
     if len(event.text) > 4:
         if not event.text[4] == " ":  # weird fix
@@ -92,7 +92,7 @@ async def broadcast_adder(event):
         await event.delete()
 
 
-@ultroid_cmd(pattern="rem ?(.*)", allow_sudo=False)
+@opkiku_cmd(pattern="rem ?(.*)", allow_sudo=False)
 async def broadcast_remover(event):
     if len(event.text) > 4:
         if not event.text[4] == " ":  # weird fix
@@ -120,7 +120,7 @@ async def broadcast_remover(event):
         await x.delete()
 
 
-@ultroid_cmd(pattern="listchannels")
+@opkiku_cmd(pattern="listchannels")
 async def list_all(event):
     x = await eor(event, "`Calculating...`")
     channels = get_channels()
@@ -131,7 +131,7 @@ async def list_all(event):
     for channel in channels:
         name = ""
         try:
-            name = (await ultroid.get_entity(int(channel))).title
+            name = (await opkiku.get_entity(int(channel))).title
         except BaseException:
             name = ""
         msg += f"=> **{name}** [`{channel}`]\n"
@@ -153,7 +153,7 @@ async def list_all(event):
         await x.edit(msg)
 
 
-@ultroid_cmd(pattern="forward ?(.*)", allow_sudo=False)
+@opkiku_cmd(pattern="forward ?(.*)", allow_sudo=False)
 async def forw(event):
     if not event.is_reply:
         await eor(event, "Reply to a message to broadcast.")
@@ -169,14 +169,14 @@ async def forw(event):
     error_count = 0
     for channel in channels:
         try:
-            await ultroid_bot.forward_messages(int(channel), previous_message)
+            await opkiku_bot.forward_messages(int(channel), previous_message)
             sent_count += 1
             await x.edit(
                 f"Sent : {sent_count}\nError : {error_count}\nTotal : {len(channels)}",
             )
         except Exception:
             try:
-                await ultroid_bot.send_message(
+                await opkiku_bot.send_message(
                     Var.LOG_CHANNEL,
                     f"Error in sending at {channel}.",
                 )
@@ -189,12 +189,12 @@ async def forw(event):
     await x.edit(f"{sent_count} messages sent with {error_count} errors.")
     if error_count > 0:
         try:
-            await ultroid_bot.send_message(Var.LOG_CHANNEL, f"{error_count} Errors")
+            await opkiku_bot.send_message(Var.LOG_CHANNEL, f"{error_count} Errors")
         except BaseException:
             await x.edit("Set up log channel for checking errors.")
 
 
-@ultroid_cmd(pattern="broadcast ?(.*)", allow_sudo=False)
+@opkiku_cmd(pattern="broadcast ?(.*)", allow_sudo=False)
 async def sending(event):
     x = await eor(event, "`Processing...`")
     if not event.is_reply:
@@ -224,13 +224,13 @@ async def sending(event):
             await x.edit(f"Not supported. Try `{hndlr}forward`")
             return
         if not previous_message.web_preview and previous_message.photo:
-            file = await ultroid_bot.download_file(previous_message.media)
-            uploaded_doc = await ultroid_bot.upload_file(file, file_name="img.png")
+            file = await opkiku_bot.download_file(previous_message.media)
+            uploaded_doc = await opkiku_bot.upload_file(file, file_name="img.png")
             raw_text = previous_message.text
             for channel in channels:
                 try:
                     if previous_message.photo:
-                        await ultroid_bot.send_file(
+                        await opkiku_bot.send_file(
                             int(channel),
                             InputMediaUploadedPhoto(file=uploaded_doc),
                             force_document=False,
@@ -244,11 +244,11 @@ async def sending(event):
                     )
                 except Exception as error:
                     try:
-                        await ultroid_bot.send_message(
+                        await opkiku_bot.send_message(
                             Var.LOG_CHANNEL,
                             f"Error in sending at {channel}.",
                         )
-                        await ultroid_bot.send_message(
+                        await opkiku_bot.send_message(
                             Var.LOG_CHANNEL,
                             "Error! " + str(error),
                         )
@@ -268,7 +268,7 @@ async def sending(event):
             await x.edit(f"{sent_count} messages sent with {error_count} errors.")
             if error_count > 0:
                 try:
-                    await ultroid_bot.send_message(
+                    await opkiku_bot.send_message(
                         Var.LOG_CHANNEL,
                         f"{error_count} Errors",
                     )
@@ -278,7 +278,7 @@ async def sending(event):
             raw_text = previous_message.text
             for channel in channels:
                 try:
-                    await ultroid_bot.send_message(
+                    await opkiku_bot.send_message(
                         int(channel),
                         raw_text,
                         link_preview=False,
@@ -289,11 +289,11 @@ async def sending(event):
                     )
                 except Exception as error:
                     try:
-                        await ultroid_bot.send_message(
+                        await opkiku_bot.send_message(
                             Var.LOG_CHANNEL,
                             f"Error in sending at {channel}.",
                         )
-                        await ultroid_bot.send_message(
+                        await opkiku_bot.send_message(
                             Var.LOG_CHANNEL,
                             "Error! " + str(error),
                         )
@@ -313,7 +313,7 @@ async def sending(event):
             await x.edit(f"{sent_count} messages sent with {error_count} errors.")
             if error_count > 0:
                 try:
-                    await ultroid_bot.send_message(
+                    await opkikul_bot.send_message(
                         Var.LOG_CHANNEL,
                         f"{error_count} Errors",
                     )
