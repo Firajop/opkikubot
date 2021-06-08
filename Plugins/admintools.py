@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 """
 ✘ Commands Available -
@@ -62,7 +62,7 @@ from telethon.tl.types import ChatAdminRights, InputMessagesFilterPinned
 from . import *
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="promote ?(.*)",
     groups_only=True,
     admins_only=True,
@@ -100,7 +100,7 @@ async def prmte(ult):
     await xx.delete()
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="demote ?(.*)",
     groups_only=True,
     admins_only=True,
@@ -138,7 +138,7 @@ async def dmote(ult):
     await xx.delete()
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="ban ?(.*)",
     groups_only=True,
     admins_only=True,
@@ -175,7 +175,7 @@ async def bban(ult):
         )
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="unban ?(.*)",
     groups_only=True,
     admins_only=True,
@@ -202,7 +202,7 @@ async def uunban(ult):
         )
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="kick ?(.*)",
     groups_only=True,
     admins_only=True,
@@ -238,7 +238,7 @@ async def kck(ult):
         )
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="pin ?(.*)",
 )
 async def pin(msg):
@@ -280,7 +280,7 @@ async def pin(msg):
             pass
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="unpin($| (.*))",
 )
 async def unp(ult):
@@ -311,7 +311,7 @@ async def unp(ult):
     await xx.edit("`Unpinned!`")
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="purge$",
 )
 async def fastpurger(purg):
@@ -342,7 +342,7 @@ async def fastpurger(purg):
     await done.delete()
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="purgeme$",
 )
 async def fastpurgerme(purg):
@@ -372,8 +372,7 @@ async def fastpurgerme(purg):
     await asyncio.sleep(5)
     await done.delete()
 
-
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="purgeall$",
 )
 async def _(e):
@@ -399,7 +398,7 @@ async def _(e):
         )
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="del$",
 )
 async def delete_it(delme):
@@ -416,7 +415,7 @@ async def delete_it(delme):
             )
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="edit",
 )
 async def editer(edit):
@@ -433,7 +432,7 @@ async def editer(edit):
         i = i + 1
 
 
-@ultroid_cmd(pattern="pinned")
+@opkiku_cmd(pattern="pinned")
 async def get_pinned(event):
     x = await eor(event, get_string("com_1"))
     chat_id = (str(event.chat_id)).replace("-100", "")
@@ -453,7 +452,7 @@ async def get_pinned(event):
         return await eod(x, "There is no pinned message in chat!", time=5)
 
 
-@ultroid_cmd(pattern="listpinned")
+@opkiku_cmd(pattern="listpinned")
 async def get_all_pinned(event):
     x = await eor(event, get_string("com_1"))
     chat_id = (str(event.chat_id)).replace("-100", "")
