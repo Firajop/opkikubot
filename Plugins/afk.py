@@ -183,7 +183,7 @@ async def _(event):
     else:
         pic = None
     if not USER_AFK:
-        last_seen_status = await ultroid_bot(
+        last_seen_status = await opkiku_bot(
             GetPrivacyRequest(InputPrivacyKeyStatusTimestamp()),
         )
         if isinstance(last_seen_status.rules, PrivacyValueAllowAll):
@@ -192,13 +192,13 @@ async def _(event):
         if reason:
             try:
                 if pic.endswith((".tgs", ".webp")):
-                    await ultroid_bot.send_message(event.chat_id, file=pic)
-                    await ultroid_bot.send_message(
+                    await opkiku_bot.send_message(event.chat_id, file=pic)
+                    await opkiku_bot.send_message(
                         event.chat_id,
                         get_string("afk_5").format(reason),
                     )
                 else:
-                    await ultroid_bot.send_message(
+                    await opkiku_bot.send_message(
                         event.chat_id,
                         get_string("afk_5").format(reason),
                         file=pic,
@@ -211,41 +211,41 @@ async def _(event):
         else:
             try:
                 if pic.endswith((".tgs", ".webp")):
-                    await ultroid_bot.send_message(event.chat_id, file=pic)
-                    await ultroid_bot.send_message(event.chat_id, get_string("afk_6"))
+                    await opkiku_bot.send_message(event.chat_id, file=pic)
+                    await opkiku_bot.send_message(event.chat_id, get_string("afk_6"))
                 else:
-                    await ultroid_bot.send_message(
+                    await opkiku_bot.send_message(
                         event.chat_id,
                         get_string("afk_6"),
                         file=pic,
                     )
             except BaseException:
-                await ultroid_bot.send_message(event.chat_id, get_string("afk_6"))
+                await opkiku_bot.send_message(event.chat_id, get_string("afk_6"))
         await event.delete()
         try:
             if reason and pic:
                 if pic.endswith((".tgs", ".webp")):
-                    await ultroid_bot.send_message(LOG, file=pic)
-                    await ultroid_bot.send_message(
+                    await opkiku_bot.send_message(LOG, file=pic)
+                    await opkiku_bot.send_message(
                         LOG,
                         get_string("afk_7").format(reason),
                     )
                 else:
-                    await ultroid_bot.send_message(
+                    await opkiku_bot.send_message(
                         LOG,
                         get_string("afk_7").format(reason),
                         file=pic,
                     )
             elif reason:
-                await ultroid_bot.send_message(LOG, get_string("afk_7").format(reason))
+                await opkiku_bot.send_message(LOG, get_string("afk_7").format(reason))
             elif pic:
                 if pic.endswith((".tgs", ".webp")):
-                    await ultroid_bot.send_message(LOG, file=pic)
-                    await ultroid_bot.send_message(LOG, get_string("afk_8"))
+                    await opkiku_bot.send_message(LOG, file=pic)
+                    await opkiku_bot.send_message(LOG, get_string("afk_8"))
                 else:
-                    await ultroid_bot.send_message(LOG, get_string("afk_8"), file=pic)
+                    await opkiku_bot.send_message(LOG, get_string("afk_8"), file=pic)
             else:
-                await ultroid_bot.send_message(LOG, get_string("afk_8"))
+                await opkiku_bot.send_message(LOG, get_string("afk_8"))
         except BaseException:
             pass
 
