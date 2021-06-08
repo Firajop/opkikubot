@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 """
 ✘ Commands Available -
@@ -23,13 +23,13 @@
 
 import re
 
-from pyUltroid.functions.blacklist_db import *
+from pyopkikubot.functions.blacklist_db import *
 from telethon.tl.types import ChannelParticipantsAdmins
 
 from . import *
 
 
-@ultroid_cmd(pattern="blacklist ?(.*)")
+@opkiku_cmd(pattern="blacklist ?(.*)")
 async def af(e):
     if e.is_group:
         if not e._chat.admin_rights:
@@ -43,7 +43,7 @@ async def af(e):
     await eor(e, f"Done : `{wrd}` Blacklisted here.")
 
 
-@ultroid_cmd(pattern="remblacklist ?(.*)")
+@opkiku_cmd(pattern="remblacklist ?(.*)")
 async def rf(e):
     if e.is_group:
         if not e._chat.admin_rights:
@@ -56,7 +56,7 @@ async def rf(e):
     await eor(e, f"Done : `{wrd}` Removed from Blacklist.")
 
 
-@ultroid_cmd(pattern="listblacklist")
+@opkiku_cmd(pattern="listblacklist")
 async def lsnote(e):
     if e.is_group:
         if not e._chat.admin_rights:
@@ -69,7 +69,7 @@ async def lsnote(e):
         await eor(e, "No Blacklist word Found Here")
 
 
-@ultroid_bot.on(events.NewMessage(incoming=True))
+@opkiku_bot.on(events.NewMessage(incoming=True))
 async def bl(e):
     chat = e.chat_id
     x = get_blacklist(int(chat))
