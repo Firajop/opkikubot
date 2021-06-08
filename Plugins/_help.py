@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 from pyUltroid.dB.database import Var
 from support import *
@@ -14,7 +14,7 @@ from telethon.errors.rpcerrorlist import BotResponseTimeoutError as rep
 from . import *
 
 
-@ultroid_cmd(
+@opkikubot_cmd(
     pattern="help ?(.*)",
 )
 async def ult(ult):
@@ -26,7 +26,7 @@ async def ult(ult):
                 output = f"**Plugin** - `{plug}`\n"
                 for i in HELP[plug]:
                     output += i
-                output += "\n© @TeamUltroid"
+                output += "\n© @opkikubot"
                 await eor(ult, output)
             elif plug in CMD_HELP:
                 kk = f"Plugin Name-{plug}\n\n✘ Commands Available -\n\n"
