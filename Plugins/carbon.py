@@ -181,7 +181,7 @@ async def crbn(event):
     if event.reply_to_msg_id:
         temp = await event.get_reply_message()
         if temp.media:
-            b = await ultroid_bot.download_media(temp)
+            b = await opkiku_bot.download_media(temp)
             a = open(b)
             code = a.read()
             a.close()
@@ -210,7 +210,7 @@ async def crbn(event):
     if event.reply_to_msg_id:
         temp = await event.get_reply_message()
         if temp.media:
-            b = await ultroid_bot.download_media(temp)
+            b = await opkiku_bot.download_media(temp)
             a = open(b)
             code = a.read()
             a.close()
