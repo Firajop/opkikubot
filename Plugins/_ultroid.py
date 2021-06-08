@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 
 from telethon.errors import ChatSendInlineForbiddenError
@@ -11,18 +11,18 @@ from telethon.errors import ChatSendInlineForbiddenError
 from . import *
 
 REPOMSG = (
-    "• **ULTROID USERBOT** •\n\n",
-    "• Repo - [Click Here](https://github.com/TeamUltroid/Ultroid)\n",
-    "• Support - @UltroidSupport",
+    "• **OPKIKU USERBOT** •\n\n",
+    "• Repo - [Click Here](https://github.com/OPGOHIL/OPKIKUBOT)\n",
+    "• Support - @OPGOHIL",
 )
 
 
-@ultroid_cmd(pattern="repo$")
+@opkiku_cmd(pattern="repo$")
 async def repify(e):
     try:
-        q = await ultroid_bot.inline_query(Var.BOT_USERNAME, "repo")
+        q = await opkiku_bot.inline_query(Var.BOT_USERNAME, "repo")
         await q[0].click(e.chat_id)
-        if e.sender_id == ultroid_bot.uid:
+        if e.sender_id == opkiku_bot.uid:
             await e.delete()
     except ChatSendInlineForbiddenError:
         await eor(e, REPOMSG)
