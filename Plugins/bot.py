@@ -77,7 +77,7 @@ async def lol(ult):
     als = (get_string("alive_1")).format(
         header,
         OWNER_NAME,
-        ultroid_version,
+        Opkiku_version,
         UltVer,
         uptime,
         pyver(),
@@ -94,8 +94,8 @@ async def lol(ult):
             await eor(ult, als)
     else:
         try:
-            await ultroid_bot.send_message(ult.chat_id, file=pic)
-            await ultroid_bot.send_message(ult.chat_id, als)
+            await opkiku_bot.send_message(ult.chat_id, file=pic)
+            await opkiku_bot.send_message(ult.chat_id, als)
             await ult.delete()
         except ChatSendMediaForbiddenError:
             await eor(ult, als)
