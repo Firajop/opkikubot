@@ -1,10 +1,10 @@
 #!/bin/bash
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 import os
 from time import sleep
@@ -21,12 +21,14 @@ else:
     _ = os.system("cls")
 
 a = r"""
-  _    _ _ _             _     _
- | |  | | | |           (_)   | |
- | |  | | | |_ _ __ ___  _  __| |
- | |  | | | __| '__/ _ \| |/ _  |
- | |__| | | |_| | | (_) | | (_| |
-  \____/|_|\__|_|  \___/|_|\__,_|
+     ____        _    _ _          _           _   
+  / __ \      | |  (_) |        | |         | |  
+ | |  | |_ __ | | ___| | ___   _| |__   ___ | |_ 
+ | |  | | '_ \| |/ / | |/ / | | | '_ \ / _ \| __|
+ | |__| | |_) |   <| |   <| |_| | |_) | (_) | |_ 
+  \____/| .__/|_|\_\_|_|\_\\__,_|_.__/ \___/ \__|
+        | |                                      
+        |_|                                      
 """
 
 print(a)
