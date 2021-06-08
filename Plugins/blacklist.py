@@ -23,7 +23,7 @@
 
 import re
 
-from pyopkikubot.functions.blacklist_db import *
+from pyopkiku.functions.blacklist_db import *
 from telethon.tl.types import ChannelParticipantsAdmins
 
 from . import *
