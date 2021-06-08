@@ -1,5 +1,5 @@
 {
-    "name": "Ultroid UserBot",
+    "name": "opkiku UserBot",
     "description": "Pluggable telegram userbot, made in python using Telethon.",
     "logo": "https://telegra.ph/368899017899jpg-06-08",
     "keywords": [
@@ -10,7 +10,7 @@
         "ultroid"
     ],
     "repository": "https://github.com/opgohil/opkikubot/",
-    "website": "https://opgohil.tech",
+    "website": "https://opgohil.com",
     "success_url": "https://t.me/opgohil",
     "stack": "container",
     "env": {
