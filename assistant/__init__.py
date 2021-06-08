@@ -1,19 +1,19 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
-from pyUltroid import *
-from pyUltroid.dB.database import Var
-from pyUltroid.functions.all import *
+from pyopkikuboy import *
+from pyopkikuboy.dB.database import Var
+from pyopkikuboy.functions.all import *
 from telethon import Button, custom
 
 from strings import get_languages, get_string
 
-OWNER_NAME = ultroid_bot.me.first_name
-OWNER_ID = ultroid_bot.me.id
+OWNER_NAME = opgohil_bot.me.first_name
+OWNER_ID = opgohil_bot.me.id
 
 
 async def setit(event, name, value):
