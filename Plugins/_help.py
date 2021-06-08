@@ -5,7 +5,7 @@
 # PLease read the GNU Affero General Public License in
 # <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
-from pyUltroid.dB.database import Var
+from pyopkikubot.dB.database import Var
 from support import *
 from telethon.errors.rpcerrorlist import BotInlineDisabledError as dis
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as bmi
