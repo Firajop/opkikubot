@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 """
 ✘ Commands Available
@@ -63,7 +63,7 @@ except BaseException:
     HEROKU_APP_NAME = None
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="alive$",
 )
 async def lol(ult):
@@ -101,7 +101,7 @@ async def lol(ult):
             await eor(ult, als)
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="ping$",
 )
 async def _(event):
@@ -113,14 +113,14 @@ async def _(event):
     await x.edit(get_string("ping").format(ms, uptime))
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="cmds$",
 )
 async def cmds(event):
     await allcmds(event)
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="restart$",
 )
 async def restartbt(ult):
@@ -131,7 +131,7 @@ async def restartbt(ult):
         await restart(ult)
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="logs$",
 )
 async def _(ult):
@@ -155,7 +155,7 @@ async def _(ult):
     await xx.delete()
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="usage$",
 )
 async def dyno_usage(dyno):
@@ -225,7 +225,7 @@ async def dyno_usage(dyno):
     )
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="shutdown$",
 )
 async def shht(event):
