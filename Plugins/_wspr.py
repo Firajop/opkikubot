@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 import re
 
@@ -25,7 +25,7 @@ snap = {}
 buddhhu = []
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="wspr ?(.*)",
 )
 async def _(e):
@@ -42,7 +42,7 @@ async def _(e):
         put = e.pattern_match.group(1)
     if put:
         try:
-            results = await ultroid_bot.inline_query(Var.BOT_USERNAME, f"msg {put}")
+            results = await opkiku_bot.inline_query(Var.BOT_USERNAME, f"msg {put}")
         except rep:
             return await eor(
                 e,
@@ -73,7 +73,7 @@ async def _(e):
         desc = "Touch me"
     if "wspr" not in vvv:
         try:
-            logi = await ultroid_bot(gu(id=query))
+            logi = await opkiku_bot(gu(id=query))
             name = logi.user.first_name
             ids = logi.user.id
             username = logi.user.username
@@ -118,7 +118,7 @@ async def _(e):
             )
     else:
         try:
-            logi = await ultroid_bot.get_entity(query)
+            logi = await opkiku_bot.get_entity(query)
             button = [
                 Button.inline("Secret Msg", data=f"dd_{logi.id}"),
                 Button.inline("Delete Msg", data=f"del"),
