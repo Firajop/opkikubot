@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 """
 ✘ Commands Available -
@@ -41,8 +41,8 @@ afk_start = {}
 LOG = Var.LOG_CHANNEL
 
 
-@ultroid_bot.on(events.NewMessage(outgoing=True))
-@ultroid_bot.on(events.MessageEdited(outgoing=True))
+@opkiku_bot.on(events.NewMessage(outgoing=True))
+@opkiku_bot.on(events.MessageEdited(outgoing=True))
 async def set_not_afk(event):
     if event.is_private:
         if Redis("PMSETTING") == "True":
@@ -108,7 +108,7 @@ async def set_not_afk(event):
         afk_time = None
 
 
-@ultroid_bot.on(
+@opkiku_bot.on(
     events.NewMessage(incoming=True, func=lambda e: bool(e.mentioned or e.is_private)),
 )
 async def on_afk(event):
@@ -159,7 +159,7 @@ async def on_afk(event):
             pass
 
 
-@ultroid_cmd(pattern=r"afk ?(.*)")
+@opkiku_cmd(pattern=r"afk ?(.*)")
 async def _(event):
     reply = await event.get_reply_message()
     global USER_AFK
