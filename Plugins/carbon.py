@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 """
 ✘ Commands Available -
@@ -173,7 +173,7 @@ all_col = [
 ]
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="carbon",
 )
 async def crbn(event):
@@ -202,7 +202,7 @@ async def crbn(event):
     os.remove(xx)
 
 
-@ultroid_cmd(
+@opkiku_cmd(
     pattern="rcarbon",
 )
 async def crbn(event):
