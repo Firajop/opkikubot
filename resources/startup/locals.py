@@ -1,22 +1,24 @@
 # /usr/bin/python3
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# Please read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
+# PLease read the GNU Affero General Public License in
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 # Standalone file for facilitating local deploys.
 
 import os
 
 a = r"""
-  _    _ _ _             _     _
- | |  | | | |           (_)   | |
- | |  | | | |_ _ __ ___  _  __| |
- | |  | | | __| '__/ _ \| |/ _  |
- | |__| | | |_| | | (_) | | (_| |
-  \____/|_|\__|_|  \___/|_|\__,_|
+     ____        _    _ _          _           _   
+  / __ \      | |  (_) |        | |         | |  
+ | |  | |_ __ | | ___| | ___   _| |__   ___ | |_ 
+ | |  | | '_ \| |/ / | |/ / | | | '_ \ / _ \| __|
+ | |__| | |_) |   <| |   <| |_| | |_) | (_) | |_ 
+  \____/| .__/|_|\_\_|_|\_\\__,_|_.__/ \___/ \__|
+        | |                                      
+        |_|                                      
 """
 
 
@@ -29,11 +31,11 @@ def start():
     print("Welcome to Ultroid, lets start setting up!\n\n")
     print("Cloning the repository...\n\n")
     try:
-        os.system("git clone https://github.com/TeamUltroid/Ultroid && cd Ultroid")
+        os.system("git clone https://github.com/opgohil/opkikubot && cd opkikubot")
     except Exception as e:
         print(f"ERROR\n{str(e)}")
     print("\n\nDone")
-    os.system("cd Ultroid")
+    os.system("cd opkikubot")
     clear_screen()
     print(a)
     print("\n\nLet's start!\n")
@@ -73,7 +75,7 @@ def start():
     print(all_done)
     isitdone = input("\n\nIs it all correct? [y/n]")
     if isitdone == "y":
-        # https://github.com/TeamUltroid/Ultroid/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
+        # https://github.com/opgohil/opkikubot/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
         f = open(".env", "w")
         f.write(all_done)
         f.close
@@ -81,7 +83,7 @@ def start():
         print("Oh, let's redo these then -_-")
         start()
     else:
-        # https://github.com/TeamUltroid/Ultroid/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
+        # https://github.com/opgohil/opkikubot/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
         f = open(".env", "w")
         f.write(all_done)
         f.close
@@ -135,7 +137,7 @@ def check_for_py():
 
 def gen_session():
     print("\nProcessing...")
-    # https://github.com/TeamUltroid/Ultroid/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
+    # https://github.com/opgohil/opkikubot/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
     os.system("python3 resources/session/ssgen.py")
     return
 
