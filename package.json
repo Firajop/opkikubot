@@ -1,5 +1,5 @@
 {
-  "name": "ultroid-vcbot",
+  "name": "opkikubot-vcbot",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "test": "tsc --noEmit",
     "dev": "nodemon src/index.ts"
   },
-  "author": "TeamUltroid <teamultroid@protonmail.ch>",
+  "author": "Teamopgohil <opgohil@yahoo.com>",
   "license": "AGPL-3.0",
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.0",
