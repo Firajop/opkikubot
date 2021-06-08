@@ -34,7 +34,7 @@ apt-get update
 apt-get upgrade -y
 pkg upgrade -y
 pkg install python wget -y
-wget https://raw.githubusercontent.com/opgohik/opkikubot/main/resources/session/ssgen.py
+wget https://raw.githubusercontent.com/opgohil/opkikubot/main/resources/session/ssgen.py
 pip install telethon
 clear
 python3 ssgen.py
