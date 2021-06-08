@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 import random
 import re
@@ -52,23 +52,23 @@ async def e(o):
         )
         res = [
             await b.article(
-                title="Ultroid Userbot",
-                url="https://t.me/TeamUltroid",
+                title="opkiku Userbot",
+                url="https://t.me/opgohil",
                 description="Userbot | Telethon ",
                 text=ALIVEMSG,
-                thumb=InputWebDocument(ULTROID_PIC, 0, "image/jpeg", []),
+                thumb=InputWebDocument(opkiku_PIC, 0, "image/jpeg", []),
                 buttons=[
-                    [Button.url(text="Support Group", url="t.me/UltroidSupport")],
+                    [Button.url(text="Support Group", url="t.me/opgohil_bot")],
                     [
                         Button.url(
                             text="Repo",
-                            url="https://github.com/Teamultroid/Ultroid",
+                            url="https://github.com/opgohil/opkikubot",
                         ),
                     ],
                 ],
             ),
         ]
-        await o.answer(res, switch_pm=f"👥 ULTROID PORTAL", switch_pm_param="start")
+        await o.answer(res, switch_pm=f"👥 OPKIKU PORTAL", switch_pm_param="start")
 
 
 if Var.BOT_USERNAME is not None and asst is not None:
@@ -93,8 +93,8 @@ if Var.BOT_USERNAME is not None and asst is not None:
             result = builder.article(
                 title="Help Menu",
                 description="Help Menu - UserBot | Telethon ",
-                url="https://t.me/TheUltroid",
-                thumb=InputWebDocument(ULTROID_PIC, 0, "image/jpeg", []),
+                url="https://t.me/OPGOHIL",
+                thumb=InputWebDocument(OPKIKU_PIC, 0, "image/jpeg", []),
                 text=get_string("inline_4").format(
                     OWNER_NAME,
                     len(PLUGINS) - 5,
@@ -342,7 +342,7 @@ if Var.BOT_USERNAME is not None and asst is not None:
             [
                 Button.url(
                     "⚙️Sᴇᴛᴛɪɴɢs⚙️",
-                    url=f"https://t.me/{bnn}?start={ultroid_bot.me.id}",
+                    url=f"https://t.me/{bnn}?start={opgohil_bot.me.id}",
                 ),
             ],
             [Button.inline("••Cʟᴏꜱᴇ••", data="close")],
@@ -389,7 +389,7 @@ if Var.BOT_USERNAME is not None and asst is not None:
             reply_pop_up_alert = f"{plugin_name} has no detailed help..."
         else:
             reply_pop_up_alert = help_string
-        reply_pop_up_alert += "\n© @TeamUltroid"
+        reply_pop_up_alert += "\n© @opkikubot"
         try:
             if event.query.user_id in sed:
                 await event.edit(
