@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opkikubot
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 from telethon import custom, events
 from telethon.utils import get_display_name
@@ -23,10 +23,10 @@ async def all_messages_catcher(e):
             NEEDTOLOG = int(udB.get("TAG_LOG"))
         except Exception:
             return LOGS.warning("you given Wrong Grp/Channel ID in TAG_LOG.")
-        x = await ultroid_bot.get_entity(e.sender_id)
+        x = await opkiku_bot.get_entity(e.sender_id)
         if x.bot or x.verified:
             return
-        y = await ultroid_bot.get_entity(e.chat_id)
+        y = await opkiku_bot.get_entity(e.chat_id)
         if y.username:
             yy = f"[{get_display_name(y)}](https://t.me/{y.username})"
         else:
