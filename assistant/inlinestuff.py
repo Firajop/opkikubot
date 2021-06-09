@@ -153,10 +153,10 @@ async def repo(e):
             title="Ultroid Userbot",
             description="Userbot | Telethon",
             thumb=wb(ultpic, 0, "image/jpeg", []),
-            text="• **ULTROID USERBOT** •",
+            text="• **OPKIKUBOT USERBOT** •",
             buttons=[
-                [Button.url("Repo", url="https://github.com/TeamUltroid/Ultroid")],
-                [Button.url("Support", url="t.me/UltroidSupport")],
+                [Button.url("Repo", url="https://github.com/opgohil/opkikubot/")],
+                [Button.url("Support", url="t.me/opgohil")],
             ],
         ),
     ]
