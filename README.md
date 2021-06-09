@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="./resources/extras/logo_readme.jpg" alt="TeamUltroid Logo">
-</p>
-<h1 align="center">
-  <b>opkikubot - UserBot</b>
+ <b>opkikubot - UserBot</b>
 </h1>
 
 <b>A stable pluggable Telegram userbot + vc music bot, based on Telethon.</b>   
@@ -86,7 +82,7 @@ Get the [Necessary Variables](#Necessary-Variables) and then click the button be
 
 ## Session String
 Different ways to get your `SESSION`:
-* [![Run on Repl.it](https://replit.com/badge/github/opgohil/opkikubot)](https://replit.com/@TeamUltroid/UltroidStringSession)
+* [![Run on Repl.it](https://replit.com/badge/github/opgohil/opkikubot)](https://replit.com/@opgohil1/opkikubot)
 * Linux : `bash -c "$(curl -fsSL https://del.dog/Qqzzaall)"`
 * PowerShell : `cd desktop ; wget https://git.io/JZs6d ; python ultroid.py`
 * Termux : `sh -c "$(curl -fsSL https://del.dog/raw/exyqollini)"`
@@ -94,11 +90,9 @@ Different ways to get your `SESSION`:
 Made with 💕 by [@TeamUltroid](https://t.me/TeamUltroid). <br />
 
 # License
-Ultroid is licensed under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html) v3 or later.
+Opkikubot is licensed under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html) v3 or later.
 
 [![License](https://www.gnu.org/graphics/agplv3-155x51.png)](LICENSE)
 
 # Credits
-* [![TeamUltroid-Devs](https://img.shields.io/static/v1?label=Teamultroid&message=devs&color=critical)](https://t.me/UltroidDevs)
-* [Lonami](https://github.com/LonamiWebs/) for [Telethon.](https://github.com/LonamiWebs/Telethon)
-* [AndrewLaneX](https://github.com/AndrewLaneX) for [tgcalls.](http://github.com/tgcallsjs/tgcalls)
+* [![Teamopgohil-gujjuopgohil](https://img.shields.io/static/v1?label=Teamopgohil&message=gujjuopgohil&color=critical)](https://t.me/opgohil)
