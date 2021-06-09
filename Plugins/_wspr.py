@@ -25,14 +25,14 @@ snap = {}
 buddhhu = []
 
 
-@opkiku_cmd(
+@opkikubot_cmd(
     pattern="wspr ?(.*)",
 )
 async def _(e):
     if e.reply_to_msg_id:
         okk = (await e.get_reply_message()).sender_id
         try:
-            zyx = await ultroid_bot(gu(id=okk))
+            zyx = await opkikubot_bot(gu(id=okk))
             put = zyx.user.username
         except ValueError as ex:
             return await eor(e, str(ex))
@@ -73,7 +73,7 @@ async def _(e):
         desc = "Touch me"
     if "wspr" not in vvv:
         try:
-            logi = await opkiku_bot(gu(id=query))
+            logi = await opkikubot_bot(gu(id=query))
             name = logi.user.first_name
             ids = logi.user.id
             username = logi.user.username
