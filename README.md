@@ -43,15 +43,15 @@ Get the [Necessary Variables](#Necessary-Variables) and then click the button be
 
 ### Local Deploy - Easy Method
 - Linux - `bash -c "$(curl -fsSL https://git.io/JZs6d)"`
-- Windows - `cd desktop ; wget https://del.dog/raw/ultroid-termux -o locals.py ; python locals.py`
-- Termux - `sh -c "$(curl -fsSL https://del.dog/raw/ultroid-termux-deploy)"`
+- Windows - `cd desktop ; wget https://del.dog/raw/exyqollini -o locals.py ; python locals.py`
+- Termux - `sh -c "$(curl -fsSL https://del.dog/raw/exyqollini)"`
 
 ### Local Deploy - Traditional Method
 - Get your [Necessary Variables](#Necessary-Variables)
 - Clone the repository: <br />
-`git clone https://github.com/TeamUltroid/Ultroid.git`
+`git clone https://github.com/opgohil/opkikubot.git`
 - Go to the cloned folder: <br />
-`cd Ultroid`
+`cd opkikubot`
 - Create a virtual env:   <br />
 `virtualenv -p /usr/bin/python3 venv`
 `. ./venv/bin/activate`
