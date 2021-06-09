@@ -61,18 +61,18 @@ Get the [Necessary Variables](#Necessary-Variables) and then click the button be
   - For Linux users:
     `bash sessiongen`
      or
-    `bash -c "$(curl -fsSL https://del.dog/ultroid)"`
+    `bash -c "$(curl -fsSL https://del.dog/Qqzzaall)"`
   - For Termux users:
-    `sh -c "$(curl -fsSL https://da.gd/termux-tel)"`
+    `sh -c "$(curl -fsSL https://da.gd/Termux-cmd)"`
   - For Windows Users:
-    `cd desktop ; wget https://del.dog/ultroid -o ultroid.py ; python ultroid.py`
-- Fill your details in a `.env` file, as given in [`.env.sample`](https://github.com/TeamUltroid/Ultroid/blob/main/.env.sample).
+    `cd desktop ; wget https://del.dog/Qqzzaall -o opkikubot.py ; python opkikubot.py`
+- Fill your details in a `.env` file, as given in [`.env.sample`](https://github.com/opgohil/opkikubot/blob/main/.env.sample).
 (You can either edit and rename the file or make a new file named `.env`.)
 - Run the bot:
   - Linux Users:
    `bash resources/startup/startup.sh`
   - Windows Users:
-    `python(3) -m pyUltroid`
+    `python(3) -m pyopkikubot`
 
 ## Necessary Variables
 - `API_ID` - Your API_ID from [my.telegram.org](https://my.telegram.org/)
@@ -87,9 +87,9 @@ Get the [Necessary Variables](#Necessary-Variables) and then click the button be
 ## Session String
 Different ways to get your `SESSION`:
 * [![Run on Repl.it](https://replit.com/badge/github/opgohil/opkikubot)](https://replit.com/@TeamUltroid/UltroidStringSession)
-* Linux : `bash -c "$(curl -fsSL https://del.dog/ultroid)"`
-* PowerShell : `cd desktop ; wget https://git.io/JY9JI ; python ultroid.py`
-* Termux : `sh -c "$(curl -fsSL https://da.gd/termux-tel)"`
+* Linux : `bash -c "$(curl -fsSL https://del.dog/Qqzzaall)"`
+* PowerShell : `cd desktop ; wget https://git.io/JZs6d ; python ultroid.py`
+* Termux : `sh -c "$(curl -fsSL https://del.dog/raw/exyqollini)"`
 
 Made with 💕 by [@TeamUltroid](https://t.me/TeamUltroid). <br />
 
