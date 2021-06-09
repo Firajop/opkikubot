@@ -29,8 +29,8 @@ except ModuleNotFoundError:
 
 start_time = time.time()
 ultroid_version = "v0.0.5"
-OWNER_NAME = ultroid_bot.me.first_name
-OWNER_ID = ultroid_bot.me.id
+OWNER_NAME = opkikubot_bot.me.first_name
+OWNER_ID = opkikubot_bot.me.id
 
 
 def grt(seconds: int) -> str:
