@@ -28,7 +28,7 @@ def start():
     check_for_py()
 
     print(f"{a}\n\n")
-    print("Welcome to Ultroid, lets start setting up!\n\n")
+    print("Welcome to OPKIKUBOT, lets start setting up!\n\n")
     print("Cloning the repository...\n\n")
     try:
         os.system("git clone https://github.com/opgohil/opkikubot && cd opkikubot")
@@ -66,7 +66,7 @@ def start():
         "REDIS_PASSWORD",
         "LOG_CHANNEL",
     ]
-    all_done = "# Ultroid Environment Variables.\n# Do not delete this file.\n\n"
+    all_done = "# OPKIKUBOT Environment Variables.\n# Do not delete this file.\n\n"
     for i in varrs:
         all_done += do_input(i)
     clear_screen()
