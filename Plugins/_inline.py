@@ -52,7 +52,7 @@ async def e(o):
         )
         res = [
             await b.article(
-                title="opkiku Userbot",
+                title="opkikubot Userbot",
                 url="https://t.me/opgohil",
                 description="Userbot | Telethon ",
                 text=ALIVEMSG,
