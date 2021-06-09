@@ -75,7 +75,7 @@ def start():
     print(all_done)
     isitdone = input("\n\nIs it all correct? [y/n]")
     if isitdone == "y":
-        # https://github.com/opgohil/opkikubot/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
+        # https://github.com/opgohil/opkikubot/edit/main/resources/startup/locals.py
         f = open(".env", "w")
         f.write(all_done)
         f.close
@@ -83,7 +83,7 @@ def start():
         print("Oh, let's redo these then -_-")
         start()
     else:
-        # https://github.com/opgohil/opkikubot/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
+        # https://github.com/opgohil/opkikubot/edit/main/resources/startup/locals.py
         f = open(".env", "w")
         f.write(all_done)
         f.close
