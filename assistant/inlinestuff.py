@@ -150,7 +150,7 @@ async def _(e):
 async def repo(e):
     res = [
         await e.builder.article(
-            title="Ultroid Userbot",
+            title="OPKIKUBOT Userbot",
             description="Userbot | Telethon",
             thumb=wb(ultpic, 0, "image/jpeg", []),
             text="• **OPKIKUBOT USERBOT** •",
@@ -252,7 +252,7 @@ async def rextester(event):
             else:  # By @gujjuopgohil
                 outputt = output.results
                 resultm = builder.article(
-                    title="Code",  # By @ProgrammingError
+                    title="Code",  # By @gujjuopgohil
                     description=f"Language-`{lang}` & Code-`{code}`",
                     text=f"Language:\n`{lang}`\n\nCode:\n`{code}`\n\nResult:\n`{outputt}`\n\nStats:\n`{stats}`",
                 )
