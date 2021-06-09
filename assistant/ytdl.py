@@ -1,10 +1,8 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# Opkikubot - UserBot
+# Copyright (C) 2020 Teamopgohil
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
-
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
+# PLease read the GNU Affero General Public License in <https://www.github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 import asyncio
 import os
