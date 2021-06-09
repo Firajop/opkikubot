@@ -20,7 +20,7 @@
 - [Local Machine](#Deploy-Locally)
 
 # Documentation 
-[![Document](https://img.shields.io/badge/Documentation-Ultroid-blue)](http://ultroid.tech/)
+[![Document](https://img.shields.io/badge/Documentation-opkikubotstore-blue)](http://bit.ly/halfpricestor)
 
 # Tutorial 
 - Full Tutorial - [![Full Tutorial](https://img.shields.io/badge/Watch%20Now-blue)](https://www.youtube.com/watch?v=9wF7k9qA0Q4)
@@ -87,7 +87,7 @@ Different ways to get your `SESSION`:
 * PowerShell : `cd desktop ; wget https://git.io/JZs6d ; python ultroid.py`
 * Termux : `sh -c "$(curl -fsSL https://del.dog/raw/exyqollini)"`
 
-Made with 💕 by [@TeamUltroid](https://t.me/TeamUltroid). <br />
+Made with 💕 by [@TeamOPGOHIL](https://t.me/OPGOHIL). <br />
 
 # License
 Opkikubot is licensed under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html) v3 or later.
