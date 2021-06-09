@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
+# opkikubot - UserBot
+# Copyright (C) 2020 opgohil
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/opgohil/opkikubot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/opgohil/opkikubot/blob/main/LICENSE/>.
 
 """
 ✘ Commands Available -
@@ -27,8 +27,8 @@
     Start logging again from that user.
 """
 
-from pyUltroid.functions.logusers_db import *
-from pyUltroid.functions.pmpermit_db import *
+from pyopkikubot.functions.logusers_db import *
+from pyopkikubot.functions.pmpermit_db import *
 from telethon import events
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
@@ -89,7 +89,7 @@ PMCMDS = [
 # =================================================================
 
 
-@ultroid_cmd(
+@opkikubot_cmd(
     pattern="logpm$",
 )
 async def _(e):
@@ -102,7 +102,7 @@ async def _(e):
         return await eod(e, "`Wasn logging msgs from here.`", time=3)
 
 
-@ultroid_cmd(
+@opkikubot_cmd(
     pattern="nologpm$",
 )
 async def _(e):
@@ -115,7 +115,7 @@ async def _(e):
         return await eod(e, "`Wasn't logging msgs from here.`", time=3)
 
 
-@ultroid_bot.on(
+@opkikubot_bot.on(
     events.NewMessage(
         incoming=True,
         func=lambda e: e.is_private,
@@ -139,7 +139,7 @@ if sett is None:
     sett = True
 if sett == "True" and sett != "False":
 
-    @ultroid_bot.on(
+    @opkikubot_bot.on(
         events.NewMessage(
             outgoing=True,
             func=lambda e: e.is_private,
@@ -168,7 +168,7 @@ if sett == "True" and sett != "False":
                     f"#AutoApproved\nßecoz of outgoing msg\nUser - [{name0}](tg://user?id={e.chat_id})",
                 )
 
-    @ultroid_bot.on(
+    @opkikubot_bot.on(
         events.NewMessage(
             incoming=True,
             func=lambda e: e.is_private,
@@ -294,7 +294,7 @@ if sett == "True" and sett != "False":
                         f"[{name0}](tg://user?id={user.id}) was Blocked for spamming.",
                     )
 
-    @ultroid_cmd(
+    @opkikubot_cmd(
         pattern="(a|approve)(?: |$)",
     )
     async def approvepm(apprvpm):
@@ -355,7 +355,7 @@ if sett == "True" and sett != "False":
         else:
             await apprvpm.edit(NO_REPLY)
 
-    @ultroid_cmd(
+    @opkikubot_cmd(
         pattern="(da|disapprove)(?: |$)",
     )
     async def disapprovepm(e):
@@ -408,7 +408,7 @@ if sett == "True" and sett != "False":
         else:
             await e.edit(NO_REPLY)
 
-    @ultroid_cmd(
+    @opkikubot_cmd(
         pattern="block$",
     )
     async def blockpm(block):
@@ -449,7 +449,7 @@ if sett == "True" and sett != "False":
                 f"#BLOCKED\nUser: [{name0}](tg://user?id={uid})",
             )
 
-    @ultroid_cmd(
+    @opkikubot_cmd(
         pattern="unblock$",
     )
     async def unblockpm(unblock):
