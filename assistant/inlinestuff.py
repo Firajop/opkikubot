@@ -249,7 +249,7 @@ async def rextester(event):
                     description=f"Language-`{lang}` & Code-`{code}`",
                     text=f"Language:\n`{lang}`\n\nCode:\n`{code}`\n\nErrors:\n`{outputt}`\n\nStats:\n`{stats}`",
                 )
-            else:  # By @ProgrammingError
+            else:  # By @gujjuopgohil
                 outputt = output.results
                 resultm = builder.article(
                     title="Code",  # By @ProgrammingError
