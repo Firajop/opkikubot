@@ -128,8 +128,8 @@ async def _(sur):
         )
         MSG = f"**{ytdl_data['title']}** Uploaded Successfully !"
         chat = sur.chat_id
-        whome = ultroid_bot
-        if sur.is_private and sur.sender_id != ultroid_bot.uid:
+        whome = opkikubot_bot
+        if sur.is_private and sur.sender_id != opkikubot_bot.uid:
             chat = sur.sender_id
             whome = asst
             MSG += f"\nGet at {Var.BOT_USERNAME}"
@@ -211,8 +211,8 @@ async def _(fuk):
         )
         MSG = f"**{ytdl_data['title']}** Uploaded Successfully !"
         chat = fuk.chat_id
-        whome = ultroid_bot
-        if event.is_private and event.sender_id != ultroid_bot.uid:
+        whome = opkikubot_bot
+        if event.is_private and event.sender_id != opkikubot_bot.uid:
             chat = fuk.sender_id
             whome = asst
             MSG += f"\nGet at {Var.BOT_USERNAME}"
@@ -238,7 +238,7 @@ async def _(fuk):
             await asst.send_file(
                 chat,
                 f"{ytdl_data['id']}.mp4",
-                thumb=f"./resources/extras/ultroid.jpg",
+                thumb=f"./resources/extras/opkikubot.jpg",
                 caption=f"**{ytdl_data['title']}\n{time_formatter((ytdl_data['duration'])*1000)}\n{ytdl_data['uploader']}**",
                 supports_streaming=True,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
