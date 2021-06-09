@@ -11,7 +11,7 @@ from telethon.utils import get_display_name
 from . import *
 
 
-@ultroid_bot.on(
+@opkikubot_bot.on(
     events.NewMessage(
         incoming=True,
         func=lambda e: (e.mentioned),
