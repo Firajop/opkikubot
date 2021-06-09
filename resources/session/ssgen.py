@@ -71,9 +71,9 @@ API_HASH = input("Please enter your API HASH: ")
 try:
     with TelegramClient(StringSession(), API_ID, API_HASH) as opkikubot:
         print("Generating a user session for opkikubot...")
-        ult = opkiku.send_message(
+        ult = opkikubot.send_message(
             "me",
-            f"**OPKIKUBOT** `SESSION`:\n\n`{opkiku.session.save()}`\n\n**Do not share this anywhere!**",
+            f"**OPKIKUBOT** `SESSION`:\n\n`{opkikubot.session.save()}`\n\n**Do not share this anywhere!**",
         )
         print("Your SESSION has been generated. Check your telegram saved messages!")
         exit(0)
