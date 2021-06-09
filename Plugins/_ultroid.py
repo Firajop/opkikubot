@@ -20,9 +20,9 @@ REPOMSG = (
 @opkiku_cmd(pattern="repo$")
 async def repify(e):
     try:
-        q = await opkiku_bot.inline_query(Var.BOT_USERNAME, "repo")
+        q = await opkikubot_bot.inline_query(Var.BOT_USERNAME, "repo")
         await q[0].click(e.chat_id)
-        if e.sender_id == opkiku_bot.uid:
+        if e.sender_id == opkikubot_bot.uid:
             await e.delete()
     except ChatSendInlineForbiddenError:
         await eor(e, REPOMSG)
