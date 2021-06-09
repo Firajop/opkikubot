@@ -137,7 +137,7 @@ def check_for_py():
 
 def gen_session():
     print("\nProcessing...")
-    # https://github.com/opgohil/opkikubot/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
+    # https://github.com/opgohil/opkikubot/edit/main/resources/startup/locals.py
     os.system("python3 resources/session/ssgen.py")
     return
 
