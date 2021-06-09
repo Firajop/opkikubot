@@ -1,4 +1,4 @@
- <b>opkikubot - UserBot</b>
+ <b>OPKIKU - UserBot</b>
 </h1>
 
 <b>A stable pluggable Telegram userbot + vc music bot, based on Telethon.</b>   
